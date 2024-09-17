@@ -1,0 +1,17 @@
+#!/usr/bin/make -f
+
+FIREFOX_ID := {ec8030f7-c20a-464f-9b0e-13a3a9e97384}
+EXTENSION_ID := {d7742d87-e61d-4b78-b8a1-b469842139fa}
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	mkdir -p debian/webext-vimium-firefox/usr/share/mozilla/extensions/${FIREFOX_ID}/${EXTENSION_ID}
+	cp -a manifest.json debian/webext-vimium-firefox/usr/share/mozilla/extensions/${FIREFOX_ID}/${EXTENSION_ID}
+	cp -a lib debian/webext-vimium-firefox/usr/share/mozilla/extensions/${FIREFOX_ID}/${EXTENSION_ID}
+	cp -a resources debian/webext-vimium-firefox/usr/share/mozilla/extensions/${FIREFOX_ID}/${EXTENSION_ID}
+	cp -a background_scripts debian/webext-vimium-firefox/usr/share/mozilla/extensions/${FIREFOX_ID}/${EXTENSION_ID}
+	cp -a icons debian/webext-vimium-firefox/usr/share/mozilla/extensions/${FIREFOX_ID}/${EXTENSION_ID}
+	cp -a pages debian/webext-vimium-firefox/usr/share/mozilla/extensions/${FIREFOX_ID}/${EXTENSION_ID}
+	cp -a content_scripts debian/webext-vimium-firefox/usr/share/mozilla/extensions/${FIREFOX_ID}/${EXTENSION_ID}

@@ -1,0 +1,5 @@
+# Documentation is part of the UI in form of HTML files
+package-contains-documentation-outside-usr-share-doc
+
+# A huge RegEx for recognizing words is misenterpredet as binary data
+source-is-missing

@@ -1,0 +1,22 @@
+Source: vimium
+Section: web
+Priority: optional
+Maintainer: Andreas Altergott <andreas82@posteo.de>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.6.2
+Homepage: https://github.com/philc/vimium
+Rules-Requires-Root: no
+#Vcs-Git: https://salsa.debian.org/debian/vimium.git
+#Vcs-Browser: https://salsa.debian.org/debian/vimium
+
+Package: webext-vimium-firefox
+Architecture: any
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Recommends:
+ firefox (>= 112) | firefox-esr (>= 112)
+Description: keyboard-based navigation and control (Firefox)
+ Vimium is a browser extension that provides keyboard-based navigation and
+ control of the web in the spirit of the Vim editor.
+ .
+ This package provides the Firefox version of the addon.
